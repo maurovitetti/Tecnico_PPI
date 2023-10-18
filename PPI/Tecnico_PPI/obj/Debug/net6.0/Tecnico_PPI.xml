@@ -1,0 +1,804 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tecnico_PPI</name>
+    </assembly>
+    <members>
+        <member name="M:PPI.Controllers.AccionController.GetAcciones">
+            <summary>
+            Obtiene una lista de acciones.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.AccionController.GetAccion(System.Int32)">
+            <summary>
+            Obtiene una acción.
+            </summary>
+            <param name="id">ID de la acción que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.AccionController.PostAccion(PPI.DTOs.NewAccionDTO)">
+            <summary>
+            Crea una nueva acción.
+            </summary>
+            <param name="newAccionDTO">
+            Revisar el esquema de la clase
+            </param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.AccionController.PutAccion(System.Int32,PPI.DTOs.UpdateAccionDTO)">
+            <summary>
+            Modifica una acción.
+            </summary>
+            <param name="id">ID de la acción que quiere modificar</param>
+            <param name="updateAccionDTO">Revisar el esquema de la clase</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.AccionController.DeleteAccion(System.Int32)">
+            <summary>
+            Elimina una acción.
+            </summary>
+            <param name="id">ID de la acción que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.BonoController.GetBonos">
+            <summary>
+            Obtiene una lista de bonos.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.BonoController.GetBono(System.Int32)">
+            <summary>
+            Obtiene un bono.
+            </summary>
+            <param name="id">ID del bono que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.BonoController.PostBono(PPI.DTOs.NewBonoDTO)">
+            <summary>
+            Crea un nuevo Bono.
+            </summary>
+            <param name="newBonoDTO">
+            Revisar el esquema de la clase
+            </param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.BonoController.PutBono(System.Int32,PPI.DTOs.UpdateBonoDTO)">
+            <summary>
+            Modifica un Bono.
+            </summary>
+            <param name="id">ID del bono que quiere modificar</param>
+            <param name="updateBonoDTO">Revisar el esquema de la clase</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.BonoController.DeleteBono(System.Int32)">
+            <summary>
+            Elimina un bono.
+            </summary>
+            <param name="id">ID del bono que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.EstadoOrdenController.GetEstadosOrden">
+            <summary>
+            Obtiene una lista de estados de orden.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.EstadoOrdenController.GetEstadoOrden(System.Int32)">
+            <summary>
+            Obtiene un estado de orden.
+            </summary>
+            <param name="id">ID del estado orden que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.EstadoOrdenController.PostEstadoOrden(System.String)">
+            <summary>
+            Crea un nuevo estado de orden.
+            </summary>
+            <param name="descripcionEstado">Descripción del estado que desea agregar</param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.EstadoOrdenController.PutEstadoOrden(System.Int32,System.String)">
+            <summary>
+            Modifica una orden de estado.
+            </summary>
+            <param name="id">ID del estado orden que quiere modificar</param>
+            <param name="descripcionEstado">Revisar el esquema de la clase</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.EstadoOrdenController.DeleteEstadoOrden(System.Int32)">
+            <summary>
+            Elimina una orden de estado.
+            </summary>
+            <param name="id">ID del estado orden que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.FCIController.GetFCIs">
+            <summary>
+            Obtiene una lista de FCI.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.FCIController.GetFCI(System.Int32)">
+            <summary>
+            Obtiene un FCI.
+            </summary>
+            <param name="id">ID del FCI que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.FCIController.PostFCI(PPI.DTOs.NewFCIDTO)">
+            <summary>
+            Crea un nuevo fci.
+            </summary>
+            <param name="newFCIDTO">
+            Revisar el esquema de la clase
+            </param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.FCIController.PutFCI(System.Int32,PPI.DTOs.UpdateFCIDTO)">
+            <summary>
+            Modifica un FCI.
+            </summary>
+            <param name="id">ID del FCI que quiere modificar</param>
+            <param name="updateFCIDTO">Revisar el esquema de la clase</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.FCIController.DeleteFCI(System.Int32)">
+            <summary>
+            Elimina un FCI.
+            </summary>
+            <param name="id">ID del FCI que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.GetOrdenesInversion">
+            <summary>
+            Obtiene una lista ordenes de inversión.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.GetOrdenInversion(System.Int32)">
+            <summary>
+            Obtiene una orden de inversión.
+            </summary>
+            <param name="id">ID de la orden inversion que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.PostOrdenInversion(PPI.DTOs.NewOrdenInversionDTO)">
+            <summary>
+            Crea una nueva orden de inversión de tipo Accion.
+            </summary>
+            <param name="newOrdenInversionDTO">
+            Revisar el esquema de la clase
+            </param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.PutOrdenInversion(System.Int32,System.Int32)">
+            <summary>
+            Modifica una orden de inversión.
+            </summary>
+            <param name="id">ID de la orden inversion que quiere modificar</param>
+            <param name="idEstado"></param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.DeleteOrdenInversion(System.Int32)">
+            <summary>
+            Elimina una orde de inversión.
+            </summary>
+            <param name="id">ID de la orden inversion que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.ObtenerPrecioAccion(System.Int32)">
+            <summary>
+            Obtiene el precio de una acción
+            </summary>
+            <param name="IdAccion"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.CalcularMontoTotal(PPI.Models.TipoActivo,PPI.DTOs.NewOrdenInversionDTO)">
+            <summary>
+            Calcula el monto total de un activo
+            </summary>
+            <param name="tipoActivo"></param>
+            <param name="newOrdenInversionDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.GetActivo(System.Int32,System.String)">
+            <summary>
+            Obtiene el tipo de activo
+            </summary>
+            <param name="idActivo"></param>
+            <param name="tipoActivo">FCI-Bono-Accion</param>
+            <returns></returns>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.CreateOrdenInversion(PPI.DTOs.NewOrdenInversionDTO,PPI.Models.TipoActivo,PPI.Models.EstadoOrden,System.Object)">
+            <summary>
+            Crea un objeto de tipo OrdenInversion
+            </summary>
+            <param name="newOrdenInversionDTO"></param>
+            <param name="tipoActivo"></param>
+            <param name="estadoOrden"></param>
+            <param name="activo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPI.Controllers.OrdenInversionController.CargarActivoRelacionado(PPI.Models.OrdenInversion)">
+            <summary>
+            Cargar el activo correspondiente a la orden de inversion
+            </summary>
+            <param name="ordenInversion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PPI.Controllers.TipoActivoController.GetTiposDeActivos">
+            <summary>
+            Obtiene una lista de tipos de activos.
+            </summary>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.TipoActivoController.GetTipoActivo(System.Int32)">
+            <summary>
+            Obtiene un tipo de activo.
+            </summary>
+            <param name="id">ID del tipo activo que quiere obtener</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.TipoActivoController.PostTipoActivo(PPI.DTOs.NewTipoActivoDTO)">
+            <summary>
+            Crea un nuevo tipo de activo.
+            </summary>
+            <param name="newTipoActivoDTO">
+            Revisar el esquema de la clase
+            </param>
+            <response code="201" type="string">La acción se creo correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.TipoActivoController.PutTipoActivo(System.Int32,PPI.DTOs.UpdateTipoActivoDTO)">
+            <summary>
+            Modifica un tipo de activo.
+            </summary>
+            <param name="id">ID del tipo activo que quiere modificar</param>
+            <param name="updateTipoActivoDTO">Revisar el esquema de la clase</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="M:PPI.Controllers.TipoActivoController.DeleteTipoActivo(System.Int32)">
+            <summary>
+            Elimina un tipo de activo.
+            </summary>
+            <param name="id">ID del tipo activo que quiere eliminar</param>
+            <response code="200" type="string">La solicitud se procesó correctamente.</response>
+            <response code="400" type="string">La solicitud contiene datos no válidos.</response>
+            <response code="401" type="string">No autorizado.</response>
+            <response code="404" type="string">El recurso solicitado no fue encontrado.</response>
+            <response code="500" type="string">Error interno del servidor.</response>
+        </member>
+        <member name="P:PPI.DTOs.NewAccionDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba las acciones de una determinada empresa
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewAccionDTO.Nombre">
+            <summary>
+            Nombre de la empresa
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewAccionDTO.PrecioUnitario">
+            <summary>
+            Precio unitario de la acción
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.NewAccionDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase NewAccionDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.UpdateAccionDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba las acciones de una determinada empresa <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateAccionDTO.Nombre">
+            <summary>
+            Nombre de la empresa <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateAccionDTO.PrecioUnitario">
+            <summary>
+            Precio unitario de la acción <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.UpdateAccionDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase UpdateAccionDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.NewBonoDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba los Bonos 
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewBonoDTO.Nombre">
+            <summary>
+            Nombre del Bono
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.NewBonoDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase NewBonoDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.UpdateBonoDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba un Bono <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateBonoDTO.Nombre">
+            <summary>
+            Nombre del Bono <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.UpdateBonoDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase UpdateBonoDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.NewFCIDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba los FCI 
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewFCIDTO.Nombre">
+            <summary>
+            Nombre del FCI
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.NewFCIDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase NewFCIDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.UpdateFCIDTO.Ticker">
+            <summary>
+            Código que sirve para identificar de forma abreviaba un FCI <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateFCIDTO.Nombre">
+            <summary>
+            Nombre del FCI <br /> Parámetro opcional
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.UpdateFCIDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase UpdateFCIDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.LoginDTO.Username">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.LoginDTO.Password">
+            <summary>
+            Contraseña usuario
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.IdTipoActivo">
+            <summary>
+            Obtiene o establece el ID del tipo de activo. En el caso de no saber que ID usar, puede consultar el método GET de TipoActivoController
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.IdCuenta">
+            <summary>
+            Obtiene o establece el ID de la cuenta. (Actualmente es obligatorio, pero no hay lógica creada que haga una conexión con una tabla que tenga información sobre la cuenta)
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.IdActivo">
+            <summary>
+            Obtiene o establece el ID del activo. En caso de no saber que ID usar, puede consultar el método GET de su respectivo controller
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.CantidadActivos">
+            <summary>
+            Obtiene o establece la cantidad de activos.
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.PrecioUnitario">
+            <summary>
+            Parámetro opcional. Se debe enviar cuando el tipo de activo no sea una Acción.
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewOrdenInversionDTO.Operacion">
+            <summary>
+            Obtiene o establece el tipo de operación (Compra 'C' / Venta 'V').
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.NewOrdenInversionDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase NewOrdenInversionDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.NewTipoActivoDTO.Nombre">
+            <summary>
+            Nombre del tipo de activo
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewTipoActivoDTO.Comision">
+            <summary>
+            Comision del tipo de activo
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.NewTipoActivoDTO.Impuesto">
+            <summary>
+            Impuesto del tipo de activo
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.NewTipoActivoDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase NewTipoActivoDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PPI.DTOs.UpdateTipoActivoDTO.Nombre">
+            <summary>
+            Nombre del tipo de activo
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateTipoActivoDTO.Comision">
+            <summary>
+            Comision del tipo de activo
+            </summary>
+        </member>
+        <member name="P:PPI.DTOs.UpdateTipoActivoDTO.Impuesto">
+            <summary>
+            Impuesto del tipo de activo
+            </summary>
+        </member>
+        <member name="M:PPI.DTOs.UpdateTipoActivoDTO.IsValid(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Validacion del modelo de la clase UpdateTipoActivoDTO
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPI.Migrations.Create_tables">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Create_tables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Create_tables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Create_tables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PPI.Migrations.Add_records">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Add_records.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Add_records.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:PPI.Migrations.Add_records.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:PPI.Models.Accion">
+            <summary>
+            Representa una acción en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Accion.IdAccion">
+            <summary>
+            Obtiene o establece el identificador único de la acción.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Accion.Ticker">
+            <summary>
+            Obtiene o establece el símbolo de cotización de la acción (ticker).
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Accion.Nombre">
+            <summary>
+            Obtiene o establece el nombre de la acción.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Accion.PrecioUnitario">
+            <summary>
+            Obtiene o establece el precio unitario de la acción.
+            </summary>
+        </member>
+        <member name="T:PPI.Models.Bono">
+            <summary>
+            Representa un Bono en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Bono.IdBono">
+            <summary>
+            Obtiene o establece el identificador único del Bono.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Bono.Ticker">
+            <summary>
+            Obtiene o establece el símbolo de cotización del Bono (ticker).
+            </summary>
+        </member>
+        <member name="P:PPI.Models.Bono.Nombre">
+            <summary>
+            Obtiene o establece el nombre del Bono.
+            </summary>
+        </member>
+        <member name="T:PPI.Models.EstadoOrden">
+            <summary>
+            Representa un estado de una orden en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.EstadoOrden.IdEstadoOrden">
+            <summary>
+            Obtiene o establece el identificador único del estado de orden.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.EstadoOrden.DescripcionEstado">
+            <summary>
+            Obtiene o establece la descripción del estado de orden.
+            </summary>
+        </member>
+        <member name="T:PPI.Models.FCI">
+            <summary>
+            Representa un FCI en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.FCI.IdFCI">
+            <summary>
+            Obtiene o establece el identificador único del FCI.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.FCI.Ticker">
+            <summary>
+            Obtiene o establece el símbolo de cotización del FCI (ticker).
+            </summary>
+        </member>
+        <member name="P:PPI.Models.FCI.Nombre">
+            <summary>
+            Obtiene o establece el nombre del FCI.
+            </summary>
+        </member>
+        <member name="T:PPI.Models.OrdenInversion">
+            <summary>
+            Representa una orden de inversión en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.IdOrdenInversion">
+            <summary>
+            Obtiene o establece el identificador único de la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.IdCuenta">
+            <summary>
+            Obtiene o establece el identificador de la cuenta asociada a la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.IdEstado">
+            <summary>
+            Obtiene o establece el identificador del estado de la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.IdTipoActivo">
+            <summary>
+            Obtiene o establece el identificador del tipo de activo asociado a la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.IdActivo">
+            <summary>
+            Obtiene o establece el identificador del activo asociado a la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.Cantidad">
+            <summary>
+            Obtiene o establece la cantidad de activos involucrados en la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.Operacion">
+            <summary>
+            Obtiene o establece el tipo de operación (Compra 'C' / Venta 'V') de la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.PrecioUnitario">
+            <summary>
+            Obtiene o establece el precio unitario del activo.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.MontoTotal">
+            <summary>
+            Obtiene o establece el monto total involucrado en la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.EstadoOrden">
+            <summary>
+            Obtiene o establece el estado de la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.TipoActivo">
+            <summary>
+            Obtiene o establece el tipo de activo asociado a la orden de inversión.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.FCI">
+            <summary>
+            btiene o establece el FCI
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.Bono">
+            <summary>
+            Obtiene o establece el bono
+            </summary>
+        </member>
+        <member name="P:PPI.Models.OrdenInversion.Accion">
+            <summary>
+            Obtiene o establece la acción
+            </summary>
+        </member>
+        <member name="M:PPI.Models.OrdenInversion.ClonarOrden(PPI.Models.OrdenInversion)">
+            <summary>
+            Clona las variable de una orden de inversión, menos los tres posibles activos
+            </summary>
+            <param name="original"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PPI.Models.TipoActivo">
+            <summary>
+            Representa un tipo de activo en el sistema.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.TipoActivo.IdTipoActivo">
+            <summary>
+            Obtiene o establece el identificador único del tipo de activo.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.TipoActivo.Nombre">
+            <summary>
+            Obtiene o establece el nombre del tipo de activo.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.TipoActivo.Comision">
+            <summary>
+            Obtiene o establece la comisión asociada al tipo de activo.
+            </summary>
+        </member>
+        <member name="P:PPI.Models.TipoActivo.Impuesto">
+            <summary>
+            Obtiene o establece el impuesto asociado al tipo de activo.
+            </summary>
+        </member>
+        <member name="M:AuthController.Login(PPI.DTOs.LoginDTO)">
+            <summary>
+            Método para obtener un token
+            </summary>
+            <param name="login">Revisar el esquema de la clase</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

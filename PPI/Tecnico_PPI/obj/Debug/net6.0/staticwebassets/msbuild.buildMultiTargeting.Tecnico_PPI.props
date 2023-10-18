@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Tecnico_PPI.props" />
+</Project>
